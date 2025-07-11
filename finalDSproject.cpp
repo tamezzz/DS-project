@@ -75,6 +75,8 @@ void showAccount(const BankAccount& account) {
     cout << "Balance: $" << fixed << setprecision(2) << account.balance << endl;
 }
 
+//array implementation
+// array insert
 void addToArray() {
     if (accountCount >= MAX_ACCOUNTS) {
         cout << "Error: Cannot add more accounts. Sorted Array is full.\n";
@@ -103,6 +105,7 @@ void addToArray() {
     cout << "Account added to Sorted Array successfully.\n";
 }
 
+//array delete
 void removeFromArray() {
     if (accountCount == 0) {
         cout << "Error: No accounts in Sorted Array to remove.\n";
@@ -134,6 +137,7 @@ void removeFromArray() {
     cout << "Account deleted from Sorted Array successfully.\n";
 }
 
+//array search
 void findInArray() {
     if (accountCount == 0) {
         cout << "Error: No accounts in Sorted Array to search.\n";
@@ -154,7 +158,7 @@ void findInArray() {
 
     cout << "Account not found in Sorted Array.\n";
 }
-
+//array display
 void showArrayAccounts() {
     if (accountCount == 0) {
         cout << "No accounts in Sorted Array.\n";
@@ -172,6 +176,7 @@ void showArrayAccounts() {
     }
 }
 
+//linked list insert
 void addToList() {
     BankAccount newAccount = getAccountInfo();
 
@@ -209,6 +214,7 @@ void addToList() {
     cout << "Account inserted to list successfully.\n";
 }
 
+//linked list delete
 void removeFromList() {
     if (listHead == NULL) {
         cout << "Error: No accounts in list to delete.\n";
@@ -244,6 +250,7 @@ void removeFromList() {
     cout << "Account removed from list successfully.\n";
 }
 
+//linked list search
 void findInList() {
     if (listHead == NULL) {
         cout << "Error: No accounts in list to search.\n";
@@ -269,7 +276,7 @@ void findInList() {
 
     cout << "Account not found in list.\n";
 }
-
+//linked list display
 void showListAccounts() {
     if (listHead == NULL) {
         cout << "No accounts in list.\n";
@@ -289,13 +296,13 @@ void showListAccounts() {
     }
 }
 
-// Stack
+// Stack insert
 void pushToStack() {
     BankAccount newAccount = getAccountInfo();
     accountStack.push(newAccount);
     cout << "Account pushed to stack successfully.\n";
 }
-
+//stack delete
 void popFromStack() {
     if (accountStack.empty()) {
         cout << "Error: Stack is empty.\n";
@@ -306,7 +313,7 @@ void popFromStack() {
     showAccount(topAccount);
     accountStack.pop();
 }
-
+//stack search
 void findInStack() {
     if (accountStack.empty()) {
         cout << "Error: Stack is empty.\n";
@@ -336,7 +343,7 @@ void findInStack() {
         cout << "Account not found in stack.\n";
     }
 }
-
+//stack diplay
 void showStack() {
     if (accountStack.empty()) {
         cout << "Stack is empty.\n";
@@ -358,7 +365,7 @@ void showStack() {
     }
 }
 
-// Queue
+// Queue insert
 void enqueueToQueue() {
     BankAccount newAccount = getAccountInfo();
     accountQueue.push(newAccount);
@@ -375,7 +382,7 @@ void dequeueFromQueue() {
     showAccount(frontAccount);
     accountQueue.pop();
 }
-
+//queue search
 void findInQueue() {
     if (accountQueue.empty()) {
         cout << "Error: Queue is empty.\n";
@@ -405,7 +412,7 @@ void findInQueue() {
         cout << "Account not found in queue.\n";
     }
 }
-
+//queue display
 void showQueue() {
     if (accountQueue.empty()) {
         cout << "Queue is empty.\n";
